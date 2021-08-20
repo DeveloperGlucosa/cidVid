@@ -1,0 +1,291 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+ 
+@font-face {
+    font-family: 'sofia_probold';
+    src: url('/fonts/sofia_pro_bold_az-webfont.woff2') format('woff2'),
+         url('/fonts/sofia_pro_bold_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sofia_promedium';
+    src: url('/fonts/sofia_pro_medium_az-webfont.woff2') format('woff2'),
+         url('/fonts/sofia_pro_medium_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sofia_proregular';
+    src: url('/fonts/sofia_pro_regular_az-webfont.woff2') format('woff2'),
+         url('/fonts/sofia_pro_regular_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sofia_prosemibold';
+    src: url('/fonts/sofia_pro_semi_bold_az-webfont.woff2') format('woff2'),
+         url('/fonts/sofia_pro_semi_bold_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ //*{background: #000 !important;color: #0f0 !important;outline: solid #f00 1px !important;} */
+body{ 
+    font-family: 'sofia_proregular';
+    font-weight: 300;
+    font-style: normal;
+    overflow-x: hidden;
+    color: #030114;
+}
+.navbar{
+    @apply bg-black md:bg-transparent;
+    transition: 250ms all ease-in-out;
+}
+.navbar.scroll{
+    @apply bg-black md:bg-black;
+}
+.navbar .imagen-div{
+    @apply w-1/2 md:w-56;
+    transition: 250ms all ease-in-out;
+}
+.navbar.scroll .imagen-div{
+    @apply w-2/3 md:w-36 py-2;
+}
+
+.btn{
+    @apply font-bold px-4 py-5 text-sm focus:ring-4 focus:ring-opacity-50 rounded-full tracking-widest;
+}
+.btn-sm{
+    @apply font-bold px-8 py-3 text-sm focus:ring-4 focus:ring-opacity-50 rounded-full tracking-widest;
+}
+.menu-button.btn{
+    @apply text-base;
+}
+.btn-primary{
+    @apply  text-white bg-primary uppercase transform translate-y-0;
+}
+.btn-primary:hover{
+    @apply shadow-md ring-indigo-400 ring-4 ring-opacity-30  translate-y-1 animate-pulse;
+}
+.btn-blue{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #2680EB;
+}
+.btn-purple{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #575195;
+}
+.btn-lila{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #8B0C6F;
+}
+.btn-green{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #558567;
+}
+.btn-yellow{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #FEB42B;
+}
+.btn-red_{
+    @apply text-white uppercase transform translate-y-0;
+    background-color: #DF372D;
+}
+.form-control{
+    @apply font-light text-lg text-white placeholder-white border-b border-white block w-full mb-2 py-2 pr-5 focus:outline-none bg-transparent;
+}
+.form-group{
+    @apply mb-2;
+}
+.vacant-form-control{
+    @apply font-light text-lg text-black placeholder-black border border-gray-800 block w-full py-1 rounded-sm pr-5 focus:outline-none bg-transparent;
+}
+.vacant-form-control.is-invalid{
+    @apply  border-red-600 ring-4 ring-red-500 ring-opacity-25 border-2;
+}
+.form-control.is-invalid{
+    @apply  border-red-600 ring-4 ring-red-500 ring-opacity-25 border-2;
+}
+ul.custom-list{
+    @apply pl-5 text-lg;
+}
+ul.custom-list li{
+    @apply relative py-3;
+}
+ul.custom-list li::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+}
+ul.custom-list.blue li::before{
+    background-color: #0845AB;
+}
+ul.custom-list.purple li::before{
+    background-color: #575195;
+}
+ul.custom-list.red-list li::before{
+    background-color: #DF372D;
+}
+@screen md{
+    .text-bg::before{
+
+        width: 90%;
+        height: 100%;
+        left: 50px;
+    
+    }
+}
+
+.menu-navbar li a{
+    transition: 250ms all ease-in;
+}
+.menu-navbar li a.active{
+    position: relative;
+    @apply text-primary;
+}
+.menu-navbar li a.active::before{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    @apply bg-primary;
+    width: 100%;
+    height: 5px;
+}
+.middle-section-buttons{
+    @apply absolute flex flex-col justify-center items-center bottom-0 left-0 w-full z-10;
+
+}
+
+.middle-section-buttons a{
+    @apply font-medium text-base uppercase;
+}
+.middle-section-buttons a.white{
+    @apply text-white;
+}
+.middle-section-buttons a.black{
+    @apply text-black;
+}
+.white-stick, .black-stick{
+    position: relative;
+    width: 1px;
+    height: 20px;
+}
+.white-stick{
+    @apply bg-white;
+}
+.black-stick{
+    @apply bg-black;
+}
+
+.slide-nav-menu li{
+    @apply relative px-3 md:pr-10 pt-5 ml-0 md:ml-12 cursor-pointer font-bold;
+    transition: 250ms all;
+}
+.slide-nav-menu li::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #404040;
+
+}
+.slick-slide.slick-current.slick-center{
+    @apply text-primary;
+}
+li.slick-slide.slick-current.slick-center::before{
+    @apply bg-primary;
+}
+.historia-img{
+    mix-blend-mode: hard-light;
+    opacity: 33%;
+    @apply w-full absolute -top-16 left-0;
+}
+.timelime-item{
+    @apply relative px-12 flex flex-col justify-center items-center cursor-pointer w-1/2 md:w-auto;
+}
+.timeline-date{
+    @apply text-xl font-bold text-white;
+}
+.timelime-item p.timeline-text{
+    @apply text-sm md:text-white absolute md:w-96 text-center top-1/2 md:top-0 transform bg-white w-screen px-6 py-2 md:bg-transparent left-1/2  -translate-x-1/3 md:-translate-x-1/2 text-black z-10;
+}
+
+.timelime-item.arriba p.timeline-text{
+    @apply md:-translate-y-44 -translate-y-1/2;
+}
+.timelime-item.abajo p.timeline-text{
+    @apply md:translate-y-16 -translate-y-1/2 -translate-x-2/3 md:-translate-x-1/2;
+}
+
+.footer-bg{
+    background: rgb(44,192,253);
+    background: -moz-linear-gradient(90deg, rgba(44,192,253,1) 0%, rgba(138,82,254,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(44,192,253,1) 0%, rgba(138,82,254,1) 100%);
+    background: linear-gradient(90deg, rgba(44,192,253,1) 0%, rgba(138,82,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2cc0fd",endColorstr="#8a52fe",GradientType=1);
+}
+.pin-map.gdl{
+    top: 61%;
+    left: 42%;
+}
+.pin-map.ags{
+    top: 55%;
+    left: 46%;
+}
+.pin-map.cdmx{
+    top: 67%;
+    left: 56%;
+}
+.globo-text-container{
+    @apply bg-white flex flex-row justify-between items-center rounded-lg w-80 p-3 absolute z-10;
+}
+.cdmx .globo-text-container{
+    bottom: 20px;
+    right: -135px;
+}
+.gdl .globo-text-container{
+    bottom: 17px;
+    right: -174px;
+}
+.ags .globo-text-container{
+    bottom: 17px;
+    right: -162px;
+}
+.globo-text-container::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #FFF;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    right: 50%;
+    bottom: -14px;
+    transform: rotate(180deg);
+}
+@screen md{
+    .gdl .globo-text-container, .cdmx .globo-text-container, .ags .globo-text-container{
+        bottom: 17px;
+        right: -11px;
+    }
+    .globo-text-container::before{
+        right: 7px;
+        bottom: -14px;
+    }
+}

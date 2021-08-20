@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.form-group{
+    @apply mb-3;
+}
+.form-control{
+    @apply px-3 py-1 placeholder-gray-400 text-black bg-white border rounded-md border-gray-200 w-full block;
+}
+.form-control.is-invalid{
+    @apply border-red-600 ;
+}
+input[type="date"].form-control{
+    @apply text-gray-400;
+}
